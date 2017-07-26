@@ -1,0 +1,43 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;tax-server&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../go/src/short-url" />
+      <root url="file://$PROJECT_DIR$/../../go/src/gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../../go/src/git.apache.org" />
+      <root url="file://$PROJECT_DIR$/../../go/src/article" />
+      <root url="file://$PROJECT_DIR$/../../go/src/mkaoyaya" />
+      <root url="file://$PROJECT_DIR$/../../go/src/.idea" />
+      <root url="file://$PROJECT_DIR$/../../go/src/golang.org" />
+      <root url="file://$PROJECT_DIR$/../../go/src/github.com" />
+      <root url="file://$PROJECT_DIR$/../../go/src/bee-gorm" />
+      <root url="file://$PROJECT_DIR$/../../go/src/shared" />
+      <root url="file://$PROJECT_DIR$/../../go/src/go-dep" />
+      <root url="file://$PROJECT_DIR$/../../go/src/taxation" />
+      <root url="file://$PROJECT_DIR$/../../go/src/kaoyayacn" />
+      <root url="file://$PROJECT_DIR$/../../go/src/tutorial" />
+      <root url="file://$PROJECT_DIR$/../../go/src/thrift" />
+      <root url="file://$PROJECT_DIR$/../../go/src/tmp" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../go/src/short-url" />
+      <root url="file://$PROJECT_DIR$/../../go/src/gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../../go/src/git.apache.org" />
+      <root url="file://$PROJECT_DIR$/../../go/src/article" />
+      <root url="file://$PROJECT_DIR$/../../go/src/mkaoyaya" />
+      <root url="file://$PROJECT_DIR$/../../go/src/.idea" />
+      <root url="file://$PROJECT_DIR$/../../go/src/golang.org" />
+      <root url="file://$PROJECT_DIR$/../../go/src/github.com" />
+      <root url="file://$PROJECT_DIR$/../../go/src/bee-gorm" />
+      <root url="file://$PROJECT_DIR$/../../go/src/shared" />
+      <root url="file://$PROJECT_DIR$/../../go/src/go-dep" />
+      <root url="file://$PROJECT_DIR$/../../go/src/taxation" />
+      <root url="file://$PROJECT_DIR$/../../go/src/kaoyayacn" />
+      <root url="file://$PROJECT_DIR$/../../go/src/tutorial" />
+      <root url="file://$PROJECT_DIR$/../../go/src/thrift" />
+      <root url="file://$PROJECT_DIR$/../../go/src/tmp" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>
