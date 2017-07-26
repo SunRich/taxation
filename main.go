@@ -4,7 +4,7 @@ import (
 	"git.apache.org/thrift.git/lib/go/thrift"
 	"fmt"
 	"crypto/tls"
-	"taxation/records"
+	"records"
 	"time"
 )
 
@@ -43,9 +43,9 @@ func runServer(transportFactory thrift.TTransportFactory, protocolFactory thrift
 		return err
 	}
 	fmt.Printf("%T\n", transport)
-	record := &recordshandler{}
-	processor := records.NewTaxationProcessor(record) //根据不同RPC服务不同步
-	server := thrift.NewTSimpleServer4(processor, transport, transportFactory, protocolFactory)
+	handler :=&Recordshandler{}
+	processor := records.NewTaxationProcessor(handler) //根据不同RPC服务不同步
+	server := thrift.NewTSimpleServer4(processor,transport, transportFactory, protocolFactory)
 
 	fmt.Println("Starting the simple server... on ", addr)
 	return server.Serve()

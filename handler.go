@@ -2,19 +2,21 @@ package main
 
 import (
 	"fmt"
-	"taxation/records"
-	"taxation/tests"
+	"records"
+	"taxtests"
 )
 
-type recordshandler struct {
+type Recordshandler struct {
 }
 
-func (a *recordshandler) AddRecords(data *records.TaxRecords) (r int32, err error) {
+
+
+func (a *Recordshandler)  AddRecords(data *records.RecordsStruct) (r int32, err error) {
 	fmt.Println("records")
 	return
 }
 
-func (a *recordshandler) AddTests(data *tests.TaxTests) (r int32, err error) {
+func (a *Recordshandler) AddTests(data *taxtests.TestsStruct) (r int32, err error) {
 	fmt.Println("tests")
 	return
 }

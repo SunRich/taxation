@@ -1,6 +1,6 @@
-namespace php Thriftrpc.Taxation.Tests
 
-struct taxTests {
+
+struct testsStruct {
   1: i32 id,
   2: i32 userId (go.tag = "db:\"user_id\""),
   3: string type,
@@ -10,7 +10,7 @@ struct taxTests {
   7: string updateTime  (go.tag = "db:\"update_time\""),
 }
 
-service testService{
- i32 addTests(1:taxTests data)
+service taxtests{
+ i32 addTests(1:testsStruct data)
 }
 

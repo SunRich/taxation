@@ -1,8 +1,7 @@
-namespace php Thriftrpc.Taxation.Records
 
-include "tests.thrift"
+include "taxtests.thrift"
 
-struct taxRecords {
+struct RecordsStruct {
   1: i32 id,
   2: i32 userId (go.tag = "db:\"user_id\""),
   3: i32 testId (go.tag = "db:\"test_id\""),
@@ -10,6 +9,6 @@ struct taxRecords {
   5: string time
 }
 
-service taxation extends tests.testService{
- i32 addRecords(1:taxRecords data)
+service taxation extends taxtests.taxtests {
+ i32 addRecords(1:RecordsStruct data)
 }
