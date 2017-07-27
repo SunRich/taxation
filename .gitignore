@@ -1,5 +1,6 @@
 .idea
 main
 run.sh
-wx-article-client.exe
 env.sh
+taxation-service.exe
+taxation-service

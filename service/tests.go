@@ -33,15 +33,22 @@ func (a *Testshandler) GetTestById(id int32) (r *tests.TestsStruct, err error) {
 func (a *Testshandler) AddTests(data *tests.TestsStruct) (r int32, err error) {
 	data.CreateTime = time.Now().Local().Format("2006-01-02 15:04:05")
 	err = models.DB.Table("tax_tests").Create(&data).Error
-	fmt.Println(data)
+	r = data.ID
 	return
 }
 
 //编辑练习
 func (a *Testshandler) EditTests(id int32, data *tests.TestsStruct) (r bool, err error) {
-	fmt.Println("tests")
+	err = models.DB.Table("tax_tests").Where("id = ?", id).Updates(data).Error
+	if err != nil {
+		r = false
+		fmt.Println(err)
+	} else {
+		r = true
+	}
 	return
 }
+
 //删除练习
 func (a *Testshandler) DelTests(id int32) (r bool, err error) {
 	fmt.Println("tests")
