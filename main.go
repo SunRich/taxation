@@ -4,8 +4,10 @@ import (
 	"git.apache.org/thrift.git/lib/go/thrift"
 	"fmt"
 	"crypto/tls"
-	"records"
+	"taxation/records"
 	"time"
+	"./service"
+	"./models"
 )
 
 func init() {
@@ -13,11 +15,18 @@ func init() {
 	time.Local = timelocal
 }
 
+
+type Taxationhandler struct {
+	service.Recordshandler
+	service.Testshandler
+}
+
 func main() {
 	var protocolFactory thrift.TProtocolFactory
 	protocolFactory = thrift.NewTJSONProtocolFactory() //选择传输的格式
 	var transportFactory thrift.TTransportFactory
 	transportFactory = thrift.NewTTransportFactory()
+	models.InitMysql()
 	if err := runServer(transportFactory, protocolFactory, "0.0.0.0:9090", false); err != nil {
 		fmt.Println("error running server:", err)
 	}
@@ -43,7 +52,7 @@ func runServer(transportFactory thrift.TTransportFactory, protocolFactory thrift
 		return err
 	}
 	fmt.Printf("%T\n", transport)
-	handler :=&Recordshandler{}
+	handler :=&Taxationhandler{}
 	processor := records.NewTaxationProcessor(handler) //根据不同RPC服务不同步
 	server := thrift.NewTSimpleServer4(processor,transport, transportFactory, protocolFactory)
 
