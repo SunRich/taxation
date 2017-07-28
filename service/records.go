@@ -10,7 +10,9 @@ type Recordshandler struct {
 }
 
 func (a *Recordshandler) GetRecordsByTestsId(id int32) (r *records.RecordsStruct, err error) {
-	models.DB.Table("tax_records").Where("id = ?", id).Select("id,user_id,test_id,content,time").Find(r)
+	data := &records.RecordsStruct{}
+	models.DB.Table("tax_records").Where("test_id = ?", id).Select("id,user_id,test_id,content,time").Find(data)
+	r = data
 	return
 }
 

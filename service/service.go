@@ -25,7 +25,9 @@ func (a *Testshandler) GetTestsList(search *tests.Search) (r *tests.Pagedata, er
 
 //通过练习编号获取练习详情
 func (a *Testshandler) GetTestById(id int32) (r *tests.TestsStruct, err error) {
-	models.DB.Table("tax_tests").Where("id = ?", id).Select("id,user_id,type,content,answer_content,create_time").Find(r)
+	var data tests.TestsStruct
+	models.DB.Table("tax_tests").Where("id = ?", id).Select("id,user_id,type,content,answer_content,create_time").Find(&data)
+	r = &data
 	return
 }
 
